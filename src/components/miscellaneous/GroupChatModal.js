@@ -13,7 +13,7 @@ import {
   Input,
 } from "@chakra-ui/react";
 import { toast } from "react-toastify";
-import { ChatState } from "../../contexts/Chat.provider";
+import { ChatState } from "../../contexts/Chat";
 import axios from "../../Axios";
 import UserListItem from "../userAvatar/UserListItem";
 import UserBadgeItem from "../userAvatar/UserBadgeItem";

@@ -75,7 +75,7 @@ const SignUp = () => {
     await axios
       .post("/user/register", body)
       .then((res) => {
-        localStorage.setItem("userInfo", res?.data);
+        localStorage.setItem("userInfo", JSON.stringify(res.data));
         toast.success("user register successfully");
         history.push("/chats");
         setLoading(false);

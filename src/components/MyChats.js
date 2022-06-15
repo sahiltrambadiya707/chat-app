@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ChatState } from "../contexts/Chat.provider";
+import { ChatState } from "../contexts/Chat";
 import { toast } from "react-toastify";
 import axios from "../Axios";
 import ChatLoading from "./ChatLoading";

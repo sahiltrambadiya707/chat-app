@@ -5,16 +5,16 @@ import Chat from "./pages/Chat";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <ToastContainer />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/chats" component={Chat} />
+        <Route exact path="/chats" component={Chat} />
       </Switch>
     </div>
   );
-}
+};
 
 export default App;
