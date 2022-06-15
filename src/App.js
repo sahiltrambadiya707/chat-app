@@ -1,7 +1,7 @@
 import "./App.css";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import Home from "./pages/Home.page";
-import Chat from "./pages/Chat.page";
+import { Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import Chat from "./pages/Chat";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

@@ -36,7 +36,6 @@ const SignUp = () => {
         await axios
           .post("https://api.cloudinary.com/v1_1/dvrbxb78e/image/upload", data)
           .then((res) => {
-            console.log(res);
             setPic(res.data.url.toString());
             setLoading(false);
           })
@@ -76,7 +75,7 @@ const SignUp = () => {
     await axios
       .post("/user/register", body)
       .then((res) => {
-        localStorage.setItem("userInfo", res.data);
+        localStorage.setItem("userInfo", res?.data);
         toast.success("user register successfully");
         history.push("/chats");
         setLoading(false);
