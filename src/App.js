@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home.page";
-import Chat from "./pages/chat.page";
+import Chat from "./pages/Chat.page";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
