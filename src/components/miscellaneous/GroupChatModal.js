@@ -11,6 +11,7 @@ import {
   Button,
   FormControl,
   Input,
+  Box,
 } from "@chakra-ui/react";
 import { toast } from "react-toastify";
 import { ChatState } from "../../contexts/Chat";
@@ -134,24 +135,26 @@ const GroupChatModal = ({ children }) => {
                 onChange={(e) => handleSearch(e.target.value)}
               />
             </FormControl>
-            {selectedUser
-              ? selectedUser?.map((u) => (
-                  <UserBadgeItem key={u?._id} user={u} handleFunction={() => handleDelete(u)} />
-                ))
-              : null}
-            {loading ? (
-              <div>loading...</div>
-            ) : (
-              searchResult
-                ?.slice(0, 4)
-                .map((users) => (
-                  <UserListItem
-                    key={users?._id}
-                    user={users}
-                    handleFunction={() => handleGroup(users)}
-                  />
-                ))
-            )}
+            <Box w="100%">
+              {selectedUser
+                ? selectedUser?.map((u) => (
+                    <UserBadgeItem key={u?._id} user={u} handleFunction={() => handleDelete(u)} />
+                  ))
+                : null}
+              {loading ? (
+                <div>loading...</div>
+              ) : (
+                searchResult
+                  ?.slice(0, 4)
+                  .map((users) => (
+                    <UserListItem
+                      key={users?._id}
+                      user={users}
+                      handleFunction={() => handleGroup(users)}
+                    />
+                  ))
+              )}
+            </Box>
           </ModalBody>
 
           <ModalFooter>
